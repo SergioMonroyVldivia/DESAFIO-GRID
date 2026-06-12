@@ -4,9 +4,11 @@
 
 Este proyecto es la solución al desafío de maquetar la vista de una tienda online básica. El diseño incluye un menú de navegación (Header), una barra lateral con las categorías, una grilla principal de productos y un pie de página (Footer).
 
-## links de Git
+### links de pague Git
 
-## Requerimientos Cumplidos
+https://sergiomonroyvldivia.github.io/DESAFIO-GRID/
+
+#### Requerimientos Cumplidos
 
 El proyecto cumple estrictamente con la rúbrica de evaluación:
 
@@ -15,7 +17,7 @@ El proyecto cumple estrictamente con la rúbrica de evaluación:
 3. **Barra Lateral (Aside):** Uso de contenedores flexibles (Flexbox) con orientación vertical para distribuir las categorías.
 4. **Tarjetas de Productos (Cards):** Construidas utilizando Flexbox con orientación vertical alineando imagen, título, precio y botón.
 
-## Tecnologías Utilizadas
+##### Tecnologías Utilizadas
 
 - HTML5 Semántico
 - CSS3 (CSS Grid Layout y Flexbox)
