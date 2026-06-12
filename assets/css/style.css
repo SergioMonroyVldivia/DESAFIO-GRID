@@ -1,0 +1,85 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background-color: #eaeaea; }
+
+/* 1. LAYOUT PRINCIPAL CON GRID Y GRID-TEMPLATE-AREAS */
+.layout-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.navbar { grid-area: header; background-color: #2b4e72; color: white; padding: 20px; text-align: center; font-weight: bold; }
+.navbar a { color: white; text-decoration: none; }
+.footer { grid-area: footer; background-color: #ffffff; text-align: center; padding: 15px; font-size: 14px; color: #555; }
+
+/* 3. BARRA LATERAL CON FLEXBOX VERTICAL */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #e5e5e5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar h3 { color: #333; font-size: 18px; }
+.sidebar ul { display: flex; flex-direction: column; gap: 10px; list-style: none; color: #777; font-size: 15px; }
+
+/* CONTENEDOR PRINCIPAL */
+main { grid-area: main; padding: 20px; }
+
+/* 2. GRILLA DE PRODUCTOS CON CSS GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* 4. TARJETAS DE PRODUCTO CON FLEXBOX VERTICAL */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    height: 100%;
+}
+
+/* AJUSTE PARA QUE TODAS LAS IMÁGENES TENGAN EL MISMO PORTE */
+.product-card img { 
+    width: 100%; 
+    height: 250px; /* Alto fijo para igualar tamaños */
+    object-fit: contain; /* Ajusta sin deformar */
+    cursor: pointer; 
+}
+
+.product-name { font-size: 20px; font-weight: bold; color: #444; text-decoration: none; cursor: pointer; text-align: center;}
+.product-price { color: #666; font-size: 16px; }
+
+/* BOTÓN DE COMPRA (Ahora es un enlace con estilo de botón) */
+.buy-btn {
+    background-color: #2b4e72; color: white; border: none;
+    padding: 12px; width: 100%; cursor: pointer; font-size: 16px; 
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Necesario para que ocupe todo el ancho */
+}
+.buy-btn:hover { background-color: #1a344f; }
+
+/* Ajuste adicional para la página de detalle individual */
+.product-detail-container {
+    display: flex;
+    justify-content: flex-start;
+}
+.product-detail-container .product-card {
+    width: 400px;
+    max-width: 100%; 
+}
